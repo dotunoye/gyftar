@@ -1,316 +1,658 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>GYFTAR — The Art of Exceptional Gifting</title>
+<!-- CRITICAL: charset and viewport (MUST BE FIRST) -->
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
 
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Lato:wght@300;400;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="style.css" />
+<!-- ============================================================
+     PAGE TITLE & DESCRIPTION
+     ============================================================ -->
+
+<title>Polanco Exotic Cars | Luxury Supercars that Command the Road</title>
+
+<meta name="description" content="Polanco Exotic Cars: Rolls Royce, G-Wagon, Lamborghini in Lekki, Lagos. Bulletproof luxury vehicles for Nigerian CEOs, celebrities, politicians. Exclusive exotic car dealership.">
+
+<meta name="keywords" content="Rolls Royce Lagos, Bulletproof SUV Nigeria, G-Wagon Lekki, Lamborghini Lagos, Luxury car dealership Nigeria, Exotic cars Lagos, Armored vehicles Lagos, Mercedes G63 Lagos, Range Rover Autobiography, Ferrari Lagos, Porsche Lagos, Bentley Lagos, High-end vehicles Lekki">
+
+<!-- ============================================================
+     SEARCH ENGINE & CRAWLER OPTIMIZATION
+     ============================================================ -->
+
+<!-- Google Search Console Verification (Replace with your token) -->
+<meta name="google-site-verification" content="YOUR_GOOGLE_VERIFICATION_CODE_HERE">
+
+<!-- Canonical URL (Prevents duplicate content issues) -->
+<link rel="canonical" href="https://polancoexoticcars.com/">
+
+<!-- Robots Meta (Control indexing) -->
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+
+<!-- Language & Region -->
+<meta name="language" content="English">
+<meta name="geo.placename" content="Lekki, Lagos, Nigeria">
+<meta name="geo.region" content="NG-LA">
+
+<!-- ============================================================
+     OPEN GRAPH META TAGS
+     (WhatsApp, Facebook, Twitter, LinkedIn Preview)
+     ============================================================ -->
+
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://polancoexoticcars.com/">
+<meta property="og:title" content="Polanco Exotic Cars | Luxury Supercars in Lagos - Command the Road">
+<meta property="og:description" content="🏎️ EXCLUSIVE ACCESS | Own the rarest exotic cars in Nigeria. Rolls Royce, Bulletproof G-Wagon, Lamborghini. Curated for Lagos elite. Limited inventory. Inquire now. Command the road.">
+<meta property="og:image" content="https://polancoexoticcars.com/assets/og-image-hero.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Polanco Exotic Cars - Luxury Supercars and Bulletproof Vehicles in Lekki Lagos">
+<meta property="og:site_name" content="Polanco Exotic Cars">
+<meta property="og:locale" content="en_NG">
+
+<!-- Additional OG Images for Rich Preview -->
+<meta property="og:image:type" content="image/jpeg">
+<meta property="og:image:url" content="https://polancoexoticcars.com/assets/og-image-cars.jpg">
+
+<!-- ============================================================
+     TWITTER CARD META TAGS
+     (X/Twitter Rich Preview)
+     ============================================================ -->
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@PolancoExoticCars">
+<meta name="twitter:title" content="Polanco Exotic Cars | Luxury Supercars in Lagos">
+<meta name="twitter:description" content="🏎️ EXCLUSIVE | Own the rarest exotic cars. Rolls Royce, Bulletproof G-Wagon, Lamborghini. Lagos elite only. Limited inventory. Inquire now.">
+<meta name="twitter:image" content="https://polancoexoticcars.com/assets/twitter-image.jpg">
+<meta name="twitter:creator" content="@PolancoExoticCars">
+
+<!-- ============================================================
+     LINKEDIN META TAGS
+     (B2B/Corporate Sharing)
+     ============================================================ -->
+
+<meta property="linkedin:url" content="https://polancoexoticcars.com/">
+<meta property="linkedin:title" content="Polanco Exotic Cars - Premium Auto Dealership Lagos">
+<meta property="linkedin:description" content="Luxury exotic car dealership specializing in high-end vehicles for Nigerian CEOs, celebrities, and politicians. Rolls Royce, G-Wagon, Lamborghini.">
+
+<!-- ============================================================
+     WHATSAPP SPECIFIC META TAGS
+     (For WhatsApp Business)
+     ============================================================ -->
+
+<meta property="whatsapp:url" content="https://polancoexoticcars.com/">
+<meta property="whatsapp:title" content="Polanco Exotic Cars - Own Luxury Now">
+<meta property="whatsapp:description" content="Limited inventory. Exclusive access. Message us for appointment.">
+
+<!-- ============================================================
+     SCHEMA MARKUP (Structured Data for Google Rich Snippets)
+     ============================================================ -->
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "name": "Polanco Exotic Cars",
+  "image": "https://polancoexoticcars.com/assets/logo.png",
+  "description": "Exclusive exotic car dealership specializing in luxury supercars and bulletproof vehicles in Lekki, Lagos, Nigeria.",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Plot XX, Lekki Phase 1",
+    "addressLocality": "Lagos",
+    "addressRegion": "LA",
+    "postalCode": "106104",
+    "addressCountry": "NG"
+  },
+  "telephone": "+234701XXXXXXX",
+  "email": "info@polancoexoticcars.com",
+  "url": "https://polancoexoticcars.com",
+  "sameAs": [
+    "https://instagram.com/polancoexoticcars",
+    "https://facebook.com/polancoexoticcars",
+    "https://twitter.com/PolancoExoticCars"
+  ],
+  "priceRange": "₦₦₦₦₦",
+  "areaServed": "NG",
+  "availableLanguage": "en"
+}
+</script>
+
+<!-- Organization Schema -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "Polanco Exotic Cars",
+  "url": "https://polancoexoticcars.com",
+  "logo": "https://polancoexoticcars.com/assets/logo.png",
+  "description": "Premium exotic car dealership in Lekki, Lagos specializing in Rolls Royce, G-Wagon, Lamborghini, and bulletproof vehicles.",
+  "contact": {
+    "@type": "ContactPoint",
+    "telephone": "+234701XXXXXXX",
+    "contactType": "Sales Department"
+  }
+}
+</script>
+
+<!-- ============================================================
+     FACEBOOK PIXEL
+     (For Conversion Tracking & Remarketing)
+     ============================================================ -->
+
+<meta property="fb:app_id" content="YOUR_FACEBOOK_APP_ID">
+
+<!-- ============================================================
+     APPLE / iOS META TAGS
+     ============================================================ -->
+
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="Polanco Exotic Cars">
+<meta name="apple-itunes-app" content="app-id=XXXXXXXXXX">
+<link rel="apple-touch-icon" href="https://polancoexoticcars.com/assets/apple-touch-icon.png">
+
+<!-- ============================================================
+     WINDOWS / MICROSOFT META TAGS
+     ============================================================ -->
+
+<meta name="msapplication-TileColor" content="#D4AF37">
+<meta name="msapplication-TileImage" content="https://polancoexoticcars.com/assets/mstile-144x144.png">
+<meta name="msapplication-config" content="https://polancoexoticcars.com/assets/browserconfig.xml">
+
+<!-- ============================================================
+     THEME COLOR & BRANDING
+     ============================================================ -->
+
+<meta name="theme-color" content="#1A202C">
+<meta name="color-scheme" content="light dark">
+
+<!-- ============================================================
+     PRIVACY & SECURITY
+     ============================================================ -->
+
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://cdn.jsdelivr.net; style-src 'self' 'unsafe-inline'; img-src 'self' data: https:; font-src 'self' https://fonts.googleapis.com https://fonts.gstatic.com;">
+
+<meta name="referrer" content="strict-origin-when-cross-origin">
+
+<!-- ============================================================
+     GOOGLE ANALYTICS 4
+     (Replace with your GA4 Measurement ID)
+     ============================================================ -->
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-XXXXXXXXXX', {
+    'page_path': '/',
+    'user_id': null,
+    'allow_google_signals': true,
+    'allow_ad_personalization_signals': true
+  });
+</script>
+
+<!-- ============================================================
+     HOTJAR ANALYTICS
+     (User Behavior & Heatmaps)
+     ============================================================ -->
+
+<script>
+    (function(h,o,t,j,a,r){
+        h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
+        h._hjSettings={hjid:HOTJAR_ID,hjsv:6};
+        a=o.getElementsByTagName('head')[0];
+        r=o.createElement('script');r.async=1;
+        r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
+        a.appendChild(r);
+    })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
+</script>
+
+<!-- ============================================================
+     PRECONNECT & DNS PREFETCH
+     (Performance Optimization)
+     ============================================================ -->
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="dns-prefetch" href="https://cdn.jsdelivr.net">
+<link rel="preload" as="font" href="https://fonts.gstatic.com/s/outfit/v9/..." crossorigin>
+
+<!-- ============================================================
+     STYLESHEETS & FONTS
+     ============================================================ -->
+
+<link rel="stylesheet" href="/css/styles.css">
+<link rel="stylesheet" href="/css/phantom-scroll-animation.css">
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<!-- ============================================================
+     FAVICONS & ICONS
+     ============================================================ -->
+
+<link rel="icon" type="image/png" href="assets/images/icon.png" sizes="32x32">
+<link rel="icon" type="image/png" href="assets/images/icon.png" sizes="16x16">
+<link rel="manifest" href="https://polancoexoticcars.com/assets/site.webmanifest">
+<link rel="shortcut icon" href="https://polancoexoticcars.com/assets/favicon.ico">
+
+<!-- ============================================================
+     ALTERNATE LANGUAGE VERSIONS
+     (For International SEO)
+     ============================================================ -->
+
+<link rel="alternate" hreflang="en-NG" href="https://polancoexoticcars.com/">
+<link rel="alternate" hreflang="en" href="https://polancoexoticcars.com/">
+
+<!-- ============================================================
+     ADDITIONAL SEO TAGS
+     ============================================================ -->
+
+<!-- Last Modified Date -->
+<meta http-equiv="last-modified" content="2026-01-26T00:00:00Z">
+
+<!-- No-Archive (Optional - for confidentiality) -->
+<!-- <meta name="robots" content="noarchive"> -->
+
+<!-- Performance Hints -->
+<link rel="prefetch" href="/js/phantom-scroll.js">
+<link rel="prefetch" href="/assets/cars.json">
+
+
+  <title>Polanco Exotic Cars - Luxury Car Dealership</title>
+  <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
 
-  <!-- ============================================================
-       STICKY HEADER — Glassmorphism nav with scroll state
-       ============================================================ -->
-  <header class="site-header" id="siteHeader">
-    <div class="header-inner">
+  <!-- MODAL OVERLAY & BACKDROP -->
+  <div id="productModalOverlay" class="modal-overlay"></div>
 
-      <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Open navigation">
-        <svg viewBox="0 0 24 24"><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+  <!-- PRODUCT MODAL -->
+  <div id="productModal" class="modal">
+    <button id="modalCloseBtn" class="modal-close">&times;</button>
+    <div id="modalContent" class="modal-content">
+      <!-- Populated by JavaScript -->
+    </div>
+  </div>
+
+  <!-- MOBILE NAV OVERLAY -->
+  <div id="mobileNavOverlay" class="drawer-overlay"></div>
+
+  <!-- MOBILE NAV DRAWER (Slides from LEFT) -->
+  <aside id="mobileNavDrawer" class="drawer drawer-left">
+    <div class="drawer-nav">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="showroom.html">Showroom</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+  </aside>
+
+  <!-- CART OVERLAY -->
+  <div id="cartOverlay" class="drawer-overlay"></div>
+
+  <!-- CART DRAWER (Slides from RIGHT) -->
+  <aside id="cartDrawer" class="drawer drawer-right">
+    <div class="drawer-header">
+      <h2>Your Cart</h2>
+      <button class="drawer-close" onclick="window.closeCartDrawer();">✕</button>
+    </div>
+    <div id="cartItems" class="cart-items">
+      <!-- Populated by JavaScript -->
+    </div>
+    <div class="cart-footer">
+      <div class="cart-total-row">
+        <span>Total:</span>
+        <span id="cartTotal">₦0</span>
+      </div>
+      <button id="whatsappBtn" class="btn btn-primary" style="width: 100%; margin-top: 1rem; color: white;">
+        Checkout via WhatsApp
       </button>
+    </div>
+  </aside>
 
-      <a href="#" class="site-logo"><img src="gyftar.png" alt="" srcset=""></a>
-
-      <nav class="desktop-nav">
-        <a href="#home">Home</a>
-        <a href="#about">About</a>
-        <a href="#for-him">For Him</a>
-        <a href="#for-her">For Her</a>
-        <a href="#bespoke">Bespoke</a>
-        <a href="#contact">Contact Us</a>
-      </nav>
-
-      <div class="header-right">
-        <button class="cart-btn" id="cartOpenBtn" aria-label="Open shopping cart">
-          <svg viewBox="0 0 24 24" aria-hidden="true">
+  <!-- NAVBAR -->
+  <nav>
+    <div class="navbar-logo"><a href="index.html" class="nav-brand">
+    <img src="assets/images/gyftar.png" alt="Gyftar" class="brand-logo">
+</a></div>
+    <ul class="navbar-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="showroom.html">Showroom</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <div class="navbar-controls">
+      <button id="cartIcon" class="cart-icon-btn" title="Open cart">
+        <svg viewBox="0 0 24 24" aria-hidden="true">
             <path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/>
             <line x1="3" y1="6" x2="21" y2="6"/>
             <path d="M16 10a4 4 0 01-8 0"/>
           </svg>
-          <span class="cart-badge" id="cartBadge">0</span>
-        </button>
-      </div>
-
-    </div>
-  </header>
-
-  <!-- Mobile nav overlay -->
-  <div class="mobile-nav-overlay" id="mobileNavOverlay"></div>
-  <aside class="mobile-nav-drawer" id="mobileNavDrawer">
-    <div class="mobile-nav-header">
-      <span class="mobile-nav-title">Menu</span>
-      <button class="close-nav-btn" id="closeNavBtn" aria-label="Close menu">
-        <svg viewBox="0 0 24 24"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+        <span id="cartBadge" class="cart-badge">0</span>
+      </button>
+      <button class="navbar-toggle">
+        <span></span>
+        <span></span>
+        <span></span>
       </button>
     </div>
-    <nav class="mobile-nav-links">
-      <a href="#home">Home</a>
-      <a href="#about">About</a>
-      <a href="#for-him">For Him</a>
-        <a href="#for-her">For Her</a>
-        <a href="#bespoke">Bespoke</a>
-        <a href="#contact">Contact Us</a>
-    </nav>
-    <div class="mobile-nav-footer">
-      <a href="mailto:hello@gyftar.com" class="nav-contact-link">hello@gyftar.com</a>
+  </nav>
+
+  <!-- HERO SECTION -->
+  <section class="hero">
+    <div class="hero-slider">
+      <div class="hero-slide active" style="background:  url('https://cdn.jdpower.com/JDP_2024%20Jaguar%20F-Type%20R75%20Convertible%20Giola%20Green%20Rear%20Quarter%20View.jpg') center/cover;"></div>
+      <div class="hero-slide" style="background:  url('https://www.topgear.com/sites/default/files/cars-car/image/2019/09/tg_-_ferrari_f8_tributo_-091.jpg') center/cover;"></div>
+      <div class="hero-slide" style="background:  url('https://hips.hearstapps.com/hmg-prod/images/2026-tesla-model-s-plaid-121-68f66449d5774.jpg?crop=0.6666666666666666xw:1xh;center,top&resize=1200:*') center/cover;"></div>
+      <div class="hero-slide" style="background:  url('https://www.teslarati.com/wp-content/uploads/2019/10/Tesla-Model-S-P100DPlaid-Nurburgring-18-e1571214177807.jpg') center/cover;"></div>
     </div>
-  </aside>
-
-
-  <!-- ============================================================
-       HERO SECTION — min-height 100dvh, typewriter effect
-       ============================================================ -->
-  <section class="hero-immersive" id="home">
-    <div class="hero-overlay"></div>
-    
     <div class="hero-content">
-      <p class="hero-eyebrow">Welcome to Gyftar</p>
-      
-      <h1 class="hero-title">
-        <span id="typewriter-text"></span><span class="typewriter-cursor"></span>
-      </h1>
-      
-      <a href="#collection" class="btn-primary hero-btn">Explore the Collection</a>
-    </div>
-  </section>
-
-
-
-  <div class="divider"><hr /></div>
-
-
-  <!-- ============================================================
-       FEATURED COLLECTION — Dynamic product grid
-       ============================================================ -->
-  <section class="collection" id="collection">
-
-    <div class="section-header reveal">
-      <div>
-        <p class="section-eyebrow">Featured Collection</p>
-        <h2 class="section-title">Curated for the<br/>Extraordinary Few</h2>
-      </div>
-      <a href="#collection" class="section-link">View all →</a>
-    </div>
-
-    <div class="product-grid reveal-stagger" id="dynamic-product-grid"></div>
-
-    <!-- Product modal -->
-    <div class="modal-overlay" id="productModalOverlay"></div>
-    <aside class="product-modal" id="productModal" role="dialog" aria-modal="true">
-      <button class="modal-close-btn" id="modalCloseBtn" aria-label="Close modal">
-        <svg viewBox="0 0 24 24"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+      <h1>Where Luxury Meets Performance</h1>
+      <p>Experience the finest collection of premium automobiles, handpicked for discerning drivers.</p>
+      <button class="btn btn-primary" onclick="document.querySelector('.featured-section').scrollIntoView({behavior: 'smooth'})">
+        Explore Collection
       </button>
-      <div class="modal-content" id="modalContent"></div>
-    </aside>
-
+    </div>
+    <div class="hero-dots">
+      <div class="hero-dot active"></div>
+      <div class="hero-dot"></div>
+      <div class="hero-dot"></div>
+      <div class="hero-dot"></div>
+    </div>
   </section>
 
-
-  <div class="divider"><hr /></div>
-
-
-  <!-- ============================================================
-       THE GYFTAR STANDARD — Value props
-       ============================================================ -->
-  <section class="standards-section" id="standards">
-    <div class="standards-inner">
-
-      <div class="standards-top reveal">
-        <h2 class="standards-headline">We do not sell gifts.<br />We craft <em>legacies.</em></h2>
-        <p class="standards-copy">Every Gyftar box is a deliberate act of care. We spend months sourcing each item globally so that when it arrives, the recipient feels seen — truly, completely seen. Nothing is generic. Nothing is rushed. This is our promise.</p>
+  <!-- FEATURED COLLECTION -->
+  <section class="featured-section" id="featured">
+    <div class="container">
+      <div class="section-title">
+        <h2>Featured Collection</h2>
+        <p>Discover our handpicked selection of luxury vehicles, each a masterpiece of engineering and design.</p>
       </div>
-
-      <!-- Four pillars grid -->
-      <div class="standards-grid reveal-stagger">
-
-        <div class="standard-item">
-          <span class="standard-number">01</span>
-          <h3 class="standard-title">Hand-Sourced Global Items</h3>
-          <p class="standard-body">From Kyoto tea houses to Peruvian chocolate estates — every product is selected in person, never from a catalogue.</p>
-        </div>
-
-        <div class="standard-item">
-          <span class="standard-number">02</span>
-          <h3 class="standard-title">Bespoke Packaging</h3>
-          <p class="standard-body">Our signature rigid boxes are crafted in Lagos, lined with heritage fabric, and sealed with wax bearing your recipient's initial.</p>
-        </div>
-
-        <div class="standard-item">
-          <span class="standard-number">03</span>
-          <h3 class="standard-title">White-Glove Delivery</h3>
-          <p class="standard-body">Your gift is hand-delivered by our concierge team. No courier vans. No crumpled corners. It arrives as it was meant to arrive.</p>
-        </div>
-
-        <div class="standard-item">
-          <span class="standard-number">04</span>
-          <h3 class="standard-title">Personalised Storytelling</h3>
-          <p class="standard-body">Every box ships with a handwritten card narrating the origin of each item — because context transforms a gift into a story.</p>
-        </div>
-
+      <div class="featured-grid" id="featuredCarsContainer">
+        <!-- Populated by JavaScript -->
+      </div>
+      <div class="featured-see-more">
+        <a href="showroom.html" class="btn btn-primary">See More Vehicles</a>
       </div>
     </div>
   </section>
 
-
-  <!-- ============================================================
-       TESTIMONIAL STRIP
-       ============================================================ -->
-  <section class="testimonial-strip">
-    <div class="reveal">
-      <blockquote class="testimonial-quote">
-        "The look on her face when she opened it. That's the only review Gyftar will ever need."
-      </blockquote>
-      <p class="testimonial-attr">— Adaeze O., Lagos · The Milestone Box</p>
+  <!-- DISCOUNT DEALS -->
+  <section id="deals">
+    <div class="container">
+      <div class="section-title">
+        <h2>Limited Time Deals</h2>
+        <p>Exclusive offers on selected premium vehicles. Don't miss out on these exceptional opportunities.</p>
+      </div>
+      <div class="featured-grid" id="dealsContainer">
+        <!-- Populated by JavaScript -->
+      </div>
     </div>
   </section>
 
-
-  <!-- ============================================================
-       FOOTER
-       ============================================================ -->
-  <footer class="site-footer">
-    <div class="footer-inner">
-
-      <div class="footer-top">
-
-        <!-- Brand column -->
-        <div class="footer-brand footer-col">
-          <div class="site-logo">GYFTAR</div>
-          <p class="footer-brand-copy">Thoughtfully curated luxury gift experiences delivered across Nigeria and beyond.</p>
-        </div>
-
-        <!-- Collections column -->
-        <div class="footer-col">
-          <h4 class="footer-col-title">Collections</h4>
-          <ul>
-            <li><a href="#">Corporate Gifting</a></li>
-            <li><a href="#">Celebrations</a></li>
-            <li><a href="#">Wellness</a></li>
-            <li><a href="#">Bespoke Orders</a></li>
-          </ul>
-        </div>
-
-        <!-- Company column -->
-        <div class="footer-col">
-          <h4 class="footer-col-title">Company</h4>
-          <ul>
-            <li><a href="#">Our Story</a></li>
-            <li><a href="#">The Standard</a></li>
-            <li><a href="#">Careers</a></li>
-            <li><a href="#">Press</a></li>
-          </ul>
-        </div>
-
-        <!-- Contact column -->
-        <div class="footer-col">
-          <h4 class="footer-col-title">Contact</h4>
-          <ul>
-            <li><a href="mailto:hello@gyftar.com">hello@gyftar.com</a></li>
-            <li><a href="tel:+2348000000000">+234 800 000 0000</a></li>
-            <li><a href="#">Lagos, Nigeria</a></li>
-          </ul>
-        </div>
-
+  <!-- ABOUT US - BENTO GRID -->
+  <section id="about-bento" style="background: var(--bg-card);">
+    <div class="container">
+      <div class="section-title" style="margin-bottom: var(--spacing-xl);">
+        <h2>Why Choose Polanco Exotic Cars</h2>
       </div>
+      <div class="bento-grid">
+        <!-- Top-Left: Who We Are -->
+        <div class="card bento-large">
+          <h3 style="margin-bottom: var(--spacing-md);">Who We Are</h3>
+          <p style="margin-bottom: var(--spacing-lg); font-size: 1rem;">
+            Polanco Exotic Cars is a luxury car dealership dedicated to connecting discerning buyers with the world's finest automobiles. With over two decades of expertise, we've built our reputation on integrity, quality, and unmatched customer service.
+          </p>
+          <div class="about-section">
+            <div>
+              <div style="font-size: 2.5rem; font-weight: 700; color: var(--accent); margin-bottom: 4px;">500+</div>
+              <div style="font-size: 0.9rem; color: var(--text-muted);">Vehicles Sold</div>
+            </div>
+            <div>
+              <div style="font-size: 2.5rem; font-weight: 700; color: var(--accent); margin-bottom: 4px;">20+</div>
+              <div style="font-size: 0.9rem; color: var(--text-muted);">Years Experience</div>
+            </div>
+            <div>
+              <div style="font-size: 2.5rem; font-weight: 700; color: var(--accent); margin-bottom: 4px;">98%</div>
+              <div style="font-size: 0.9rem; color: var(--text-muted);">Customer Satisfaction</div>
+            </div>
+            <div>
+              <div style="font-size: 2.5rem; font-weight: 700; color: var(--accent); margin-bottom: 4px;">24/7</div>
+              <div style="font-size: 0.9rem; color: var(--text-muted);">Customer Support</div>
+            </div>
+          </div>
+        </div>
 
-      <div class="footer-bottom">
-        <p class="footer-copy">&copy; 2025 Gyftar. All rights reserved.</p>
+        <!-- Top-Right: Services -->
+        <div class="card bento-small-tr">
+          <h3 style="margin-bottom: var(--spacing-md);">Our Services</h3>
+          <ul style="list-style: none;">
+            <li style="margin-bottom: var(--spacing-md); display: flex; gap: var(--spacing-sm); align-items: flex-start;">
+              <span style="color: var(--accent); font-size: 1.5rem; flex-shrink: 0;">✓</span>
+              <span>Expert Consultations</span>
+            </li>
+            <li style="margin-bottom: var(--spacing-md); display: flex; gap: var(--spacing-sm); align-items: flex-start;">
+              <span style="color: var(--accent); font-size: 1.5rem; flex-shrink: 0;">✓</span>
+              <span>Test Drives</span>
+            </li>
+            <li style="margin-bottom: var(--spacing-md); display: flex; gap: var(--spacing-sm); align-items: flex-start;">
+              <span style="color: var(--accent); font-size: 1.5rem; flex-shrink: 0;">✓</span>
+              <span>Financing Options</span>
+            </li>
+            <li style="margin-bottom: var(--spacing-md); display: flex; gap: var(--spacing-sm); align-items: flex-start;">
+              <span style="color: var(--accent); font-size: 1.5rem; flex-shrink: 0;">✓</span>
+              <span>Trade-In Evaluation</span>
+            </li>
+            <li style="display: flex; gap: var(--spacing-sm); align-items: flex-start;">
+              <span style="color: var(--accent); font-size: 1.5rem; flex-shrink: 0;">✓</span>
+              <span>Insurance Support</span>
+            </li>
+          </ul>
+        </div>
 
-        <!-- Social icons -->
-        <div class="footer-socials">
-          <!-- Instagram -->
-          <a href="#" aria-label="Instagram">
-            <svg viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/><circle cx="17.5" cy="6.5" r="1.5"/></svg>
-          </a>
-          <!-- Twitter/X -->
-          <a href="#" aria-label="Twitter">
-            <svg viewBox="0 0 24 24"><path d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z"/></svg>
-          </a>
-          <!-- LinkedIn -->
-          <a href="#" aria-label="LinkedIn">
-            <svg viewBox="0 0 24 24"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"/><circle cx="4" cy="4" r="2"/></svg>
-          </a>
+        <!-- Bottom-Left: Test Drive -->
+        <div class="card bento-small-bl">
+          
+          <h3 style="margin-bottom: var(--spacing-md);">After Sales & Warranty</h3>
+          <p style="margin-bottom: var(--spacing-md); font-size: 1rem;">
+            Your satisfaction doesn't end at purchase. We provide comprehensive after-sales support and industry-leading warranty coverage.
+          </p>
+          <div style=" border-radius: var(--radius-small); ">
+            <h4 style="margin-bottom: var(--spacing-sm); color: var(--accent);">3-Year Comprehensive Coverage</h4>
+            <ul style="list-style-position: inside; color: var(--text-muted); font-size: 0.9rem;">
+              <li>Full parts & labor coverage</li>
+              <li>Roadside assistance 24/7</li>
+              <li>Free maintenance services</li>
+              <li>Extended warranty available</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Bottom-Right: After Sales -->
+        <div class="card bento-large-br">
+          <h3 style="margin-bottom: var(--spacing-md);">Ready to Test Drive?</h3>
+          <p style="margin-bottom: var(--spacing-lg); font-size: 0.95rem;">
+            Schedule your personalized test drive experience with our team.
+          </p>
+          <button class="btn btn-primary" style="width: 100%; justify-content: center;" onclick="alert('Test drive scheduled!')">
+            Book Now
+          </button>
         </div>
       </div>
+    </div>
+  </section>
 
+  <!-- CAR CARE TIPS CAROUSEL -->
+  <section id="tips">
+    <div class="container">
+      <div class="section-title">
+        <h2>Car Care Tips</h2>
+        <p>Expert advice to keep your luxury vehicle in pristine condition.</p>
+      </div>
+      <div class="carousel">
+        <div class="carousel-track">
+          <article class="carousel-item">
+            <div class="card">
+              <h3 style="color: var(--accent); margin-bottom: var(--spacing-md);">Regular Oil Changes</h3>
+              <p>
+                Maintain engine health with regular oil changes. For luxury vehicles, high-quality synthetic oils are recommended every 7,500-10,000 miles.
+              </p>
+            </div>
+          </article>
+          <article class="carousel-item">
+            <div class="card">
+              <h3 style="color: var(--accent); margin-bottom: var(--spacing-md);">Battery Care</h3>
+              <p>
+                Ensure your vehicle's battery is regularly tested and maintained. A weak battery can compromise starting performance and electronics.
+              </p>
+            </div>
+          </article>
+          <article class="carousel-item">
+            <div class="card">
+              <h3 style="color: var(--accent); margin-bottom: var(--spacing-md);">Tire Maintenance</h3>
+              <p>
+                Check tire pressure monthly and rotate tires every 6,000 miles. Proper alignment ensures longevity and optimal performance.
+              </p>
+            </div>
+          </article>
+          <article class="carousel-item">
+            <div class="card">
+              <h3 style="color: var(--accent); margin-bottom: var(--spacing-md);">Detailing</h3>
+              <p>
+                Professional detailing protects your car's paint and interior. Regular waxing and cleaning maintain the luxury appearance.
+              </p>
+            </div>
+          </article>
+          <article class="carousel-item">
+            <div class="card">
+              <h3 style="color: var(--accent); margin-bottom: var(--spacing-md);">Brake Inspection</h3>
+              <p>
+                Regular brake inspections are crucial for safety. Have your braking system checked annually for optimal performance.
+              </p>
+            </div>
+          </article>
+          <article class="carousel-item">
+            <div class="card">
+              <h3 style="color: var(--accent); margin-bottom: var(--spacing-md);">Seasonal Prep</h3>
+              <p>
+                Prepare your vehicle for seasonal changes. Winter tires, fluid adjustments, and protective treatments are recommended.
+              </p>
+            </div>
+          </article>
+        </div>
+        <button class="carousel-arrow prev">&lt;</button>
+        <button class="carousel-arrow next">&gt;</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- TESTIMONIALS -->
+  <section id="testimonials" style="background: var(--bg-card);">
+    <div class="container">
+      <div class="section-title">
+        <h2>Client Testimonials</h2>
+        <p>Hear from our satisfied customers about their Polanco Exotic Cars experience.</p>
+      </div>
+      <div class="grid grid-cols-3">
+        <article class="testimonial-card">
+          
+          <div class="testimonial-text">
+            "Polanco Exotic Cars provided exceptional service. The team's expertise and dedication made my purchase experience unforgettable."
+          </div>
+          <div class="testimonial-author">John Patterson</div>
+          <div class="testimonial-role">Mercedes S-Class Owner</div>
+          
+        </article>
+        <article class="testimonial-card">
+          
+          <div class="testimonial-text">
+            "I was impressed by the extensive inventory and the professionalism of every staff member. Highly recommended!"
+          </div>
+          <div class="testimonial-author">Sarah Williams</div>
+          <div class="testimonial-role">Porsche 911 Owner</div>
+          
+        </article>
+        <article class="testimonial-card">
+          
+          <div class="testimonial-text">
+            "The after-sales support is outstanding. They truly care about customer satisfaction beyond the purchase."
+          </div>
+          <div class="testimonial-author">Michael Chen</div>
+          <div class="testimonial-role">Tesla Model S Owner</div>
+          
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA SECTION -->
+  <section class="cta-section">
+    <div class="container">
+      <h2>Ready to Drive Your Dream Car?</h2>
+      <p>Schedule a consultation with our experts or visit our showroom today.</p>
+      <div style="display: flex; gap: var(--spacing-lg); justify-content: center; flex-wrap: wrap;">
+        <a href="showroom.html" class="btn btn-secondary">Visit Showroom</a>
+        <button class="btn" style="background: white; color: var(--accent);" onclick="alert('Calling dealer: +1 (555) 123-4567')">Call Now</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-content">
+      <div class="footer-section">
+        <h4>Polanco Exotic Cars</h4>
+        <p style="color: var(--text-muted);">
+          Premium luxury car dealership serving discerning clients worldwide.
+        </p>
+      </div>
+      
+      <div class="footer-section">
+        <h4>Contact</h4>
+        <p style="color: var(--text-muted);">
+          Plot b, Km 33 Lekki Epe Epressway, Lekki Phase 1, Local, Government Area 101233, Lekki, Lagos<br>
+          
+          +1 (555) 123-4567<br>
+         polancoexoticcars@gmail.com
+        </p>
+      </div>
+      <div class="footer-section">
+        <h4>Business Hours</h4>
+        <p style="color: var(--text-muted);">
+          Monday - Friday: 9 AM - 8 PM<br>
+          Saturday: 10 AM - 6 PM<br>
+          Sunday: Closed
+        </p>
+      </div>
+    </div>
+    <div class="footer-socials">
+        <a href="#" class="social-icon"> <aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+        <a href="#" class="social-icon">𝕏</a>
+        <a href="#" class="social-icon">in</a>
+        <a href="#" class="social-icon">📷</a>
+      </div>
+    <div class="footer-bottom">
+      <div class="footer-bottom-text">
+        © 2024 Polanco Exotic Cars. All rights reserved. | Privacy Policy | Terms of Service
+      </div>
+      
     </div>
   </footer>
 
+  <!-- SCRIPTS -->
+  <script src="js/cars.js"></script>
+  <script src="js/main.js"></script>
+  <script>
+    // Populate Featured Cars on Home Page
+    document.addEventListener('DOMContentLoaded', () => {
+      const featuredCars = getFeaturedCars();
+      CarCardRenderer.renderCarsToContainer(featuredCars, 'featuredCarsContainer');
 
-  <!-- ============================================================
-       CART DRAWER
-       ============================================================ -->
-
-  <!-- Backdrop — clicking it closes the drawer -->
-  <div class="cart-overlay" id="cartOverlay"></div>
-
-  <!-- The drawer panel -->
-  <aside class="cart-drawer" id="cartDrawer" role="dialog" aria-label="Shopping cart" aria-modal="true">
-
-    <!-- Drawer header -->
-    <div class="cart-header">
-      <div>
-        <h2 class="cart-title">Your Cart</h2>
-        <span class="cart-count-label" id="cartCountLabel">0 items</span>
-      </div>
-      <button class="cart-close-btn" id="cartCloseBtn" aria-label="Close cart">
-        <svg viewBox="0 0 24 24"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
-      </button>
-    </div>
-
-    <!-- Scrollable item list — rendered by JS -->
-    <div class="cart-items" id="cartItems">
-      <!-- Empty state shown by default; JS replaces with items -->
-      <div class="cart-empty" id="cartEmpty">
-        <div class="cart-empty-icon">
-          <svg viewBox="0 0 24 24"><path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 01-8 0"/></svg>
-        </div>
-        <p>Your cart is empty</p>
-        <span>Add a curated box to begin</span>
-      </div>
-    </div>
-
-    <!-- Footer with totals & WhatsApp CTA -->
-    <div class="cart-footer" id="cartFooter" style="display:none;">
-      <div class="cart-subtotal">
-        <span class="cart-subtotal-label">Total</span>
-        <span class="cart-subtotal-value" id="cartTotal">₦0</span>
-      </div>
-      <p class="cart-note">Prices include VAT. Delivery calculated at checkout.</p>
-      <!-- WhatsApp checkout button — triggers JS handler -->
-      <button class="btn-whatsapp" id="whatsappBtn">
-        <svg viewBox="0 0 24 24" aria-hidden="true">
-          <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.67-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.076 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421-7.403h-.004a9.87 9.87 0 00-5.031 1.378c-3.055 2.288-3.428 6.289-1.07 9.545 1.143 1.645 2.829 2.742 4.979 3.212.529.111 1.06.111 1.581 0 3.51-.574 6.565-2.696 8.039-5.677 1.537-3.116 1.537-6.556 0-9.672C19.902 6.117 16.85 4 13.051 4c-.916 0-1.823.12-2.716.358z"/>
-        </svg>
-        Checkout via WhatsApp
-      </button>
-    </div>
-
-  </aside>
-
-
-  <!-- ============================================================
-       TOAST NOTIFICATION (JS-controlled)
-       ============================================================ -->
-  <div class="toast" id="toast" role="status" aria-live="polite"></div>
-
-
-  <!-- ============================================================
-       JAVASCRIPT
-       ============================================================ -->
-  <script src="script.js"></script>
+      const dealsCars = getDiscountCars();
+      CarCardRenderer.renderCarsToContainer(dealsCars, 'dealsContainer');
+    });
+  </script>
 </body>
 </html>
