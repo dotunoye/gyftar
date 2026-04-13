@@ -389,28 +389,28 @@ class Modal {
         <span class="product-category" style="color: var(--accent); font-size: 0.65rem; text-transform: uppercase; letter-spacing: 0.15em; font-weight: 700;">
           ${product.category}
         </span>
-        
+      <div class= "header" style= "flex-direction: row; display: flex; align-items: center; justify-content: space-between;">
         <h2 class="product-name" style="font-size: 2rem; margin: 0.5rem 0; color: var(--text-main);">
           ${product.name}
         </h2>
         
-        <span class="product-price" style="font-size: 1.2rem; font-weight: 700; color: var(--accent); display: block; margin-bottom: 1rem;">
+        <span class="product-price" style="font-size: 1.2rem; font-weight: 700; color: var(--accent); display: block;">
           ${formatNGN(product.price)}
         </span>
-        
-        <p style="margin-top: 1rem; color: var(--text-muted); line-height: 1.6; margin-bottom: 1.5rem;">
+        </div>
+        <p style="margin-top: 0.5rem; color: var(--text-muted); line-height: 1.6; margin-bottom: 0.5rem;">
           ${product.shortDesc}
         </p>
         
-        <div class="modal-box-contents" style="background: #0f53ba18; padding: 1rem; border-radius: 8px; margin-bottom: 1.5rem;">
+        <div class="modal-box-contents" style="background: #0f53ba18; padding:; border-radius: 8px;">
           <h4 style="color: var(--accent); margin-bottom: 0.75rem; font-size: 0.9rem; text-transform: uppercase; letter-spacing: 0.05em;">What's Inside</h4>
           <ul style="list-style: none; padding: 0;">
             ${insideList}
           </ul>
         </div>
         
-        <div class="modal-actions" style="display: flex; gap: 1rem; margin-top: auto; padding-top: 1rem;">
-          <button class="btn btn-secondary" onclick="window.gyftarModal.close();" style="flex: 1;">Close</button>
+        <div class="modal-actions" style="display: flex; gap: 1rem; margin-top: auto;">
+          
           <button class="btn btn-primary" onclick="window.addToCart('${product.id}'); window.gyftarModal.close();" style="flex: 2; min-height: 44px;">Add to Cart</button>
         </div>
       </div>
@@ -579,6 +579,9 @@ document.addEventListener('DOMContentLoaded', () => {
             <img src="${product.image}" alt="${product.name}">
           </div>
           <div class="car-card-content">
+          <span class="product-category" style="color: var(--accent); font-size: 0.65rem; text-transform: uppercase; letter-spacing: 0.15em; font-weight: 700;">
+          ${product.category}
+        </span>
             <div class="car-card-header">
               <div class="car-card-info">
                 <h3>${product.name}</h3>
