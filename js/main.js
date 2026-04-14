@@ -20,9 +20,10 @@ const modalCloseBtn = document.getElementById('modalCloseBtn');
 const modalContent = document.getElementById('modalContent');
 
 // Navbar elements
-const navbarToggle = document.querySelector('.navbar-toggle');
-const navbarLinks = document.querySelector('.navbar-links');
-const navLinks = document.querySelectorAll('.navbar-links a');
+const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+const closeNavBtn = document.getElementById('closeNavBtn');
+const desktopNav = document.querySelector('.desktop-nav');
+const navLinks = document.querySelectorAll('.desktop-nav a, .mobile-nav-links a');
 const cartIcon = document.getElementById('cartIcon');
 const cartBadge = document.getElementById('cartBadge');
 
@@ -157,7 +158,7 @@ function updateCartDrawerUI() {
     itemsHTML = cartState.map(item => `
     <div class="cart-item">
       <div class="cart-item-image">
-        <img src="${item.image}" alt="${item.name}">
+        <img src="${item.image}" alt="${item.name}" style="width: 100%; height: 100%; object-fit: cover;">
       </div>
       <div class="cart-item-main">
         <div class="cart-item-details">
@@ -187,6 +188,14 @@ function updateCartDrawerUI() {
   // Update total
   if (cartTotal) {
     cartTotal.textContent = formatNGN(getCartTotal());
+  }
+
+  // Update cart item count badge in header
+  const cartItemCount = document.getElementById('cartItemCount');
+  if (cartItemCount) {
+    const count = getCartQuantity();
+    cartItemCount.textContent = count;
+    cartItemCount.style.display = count > 0 ? 'inline-flex' : 'none';
   }
 
   updateCartBadge();
@@ -390,7 +399,7 @@ class Modal {
           ${product.category}
         </span>
       <div class= "header" style= "flex-direction: row; display: flex; align-items: center; justify-content: space-between;">
-        <h2 class="product-name" style="font-size: 2rem; margin: 0.5rem 0; color: var(--text-main);">
+        <h2 class="product-name" style="font-size: 1.5rem; margin: 0.5rem 0; color: var(--text-main);">
           ${product.name}
         </h2>
         
@@ -423,49 +432,45 @@ class Modal {
 // ===========================
 
 function setupMobileNav() {
-  if (!navbarToggle || !navbarLinks) {
-    console.warn('Mobile nav elements not found');
+  if (!mobileMenuBtn) {
+    console.warn('Mobile menu button not found');
     return;
   }
 
-  // Hamburger toggle
-  navbarToggle.addEventListener('click', (e) => {
+  // Open drawer when hamburger is clicked
+  mobileMenuBtn.addEventListener('click', (e) => {
     e.stopPropagation();
-    navbarToggle.classList.toggle('active');
-    navbarLinks.classList.toggle('active');
-    
-    // Slide drawer
-    if (navbarToggle.classList.contains('active')) {
-      openMobileNavDrawer();
-    } else {
-      closeMobileNavDrawer();
-    }
+    openMobileNavDrawer();
   });
 
-  // Close drawer when link clicked
-  navLinks.forEach(link => {
+  // Close drawer when close button is clicked
+  if (closeNavBtn) {
+    closeNavBtn.addEventListener('click', () => {
+      closeMobileNavDrawer();
+    });
+  }
+
+  // Close drawer when a nav link is clicked
+  const mobileNavLinks = document.querySelectorAll('.mobile-nav-links a');
+  mobileNavLinks.forEach(link => {
     link.addEventListener('click', () => {
-      navbarToggle.classList.remove('active');
-      navbarLinks.classList.remove('active');
       closeMobileNavDrawer();
       updateActiveNav();
     });
   });
 
-  // Close drawer when overlay clicked
+  // Close drawer when overlay is clicked
   if (mobileNavOverlay) {
     mobileNavOverlay.addEventListener('click', () => {
-      navbarToggle.classList.remove('active');
-      navbarLinks.classList.remove('active');
       closeMobileNavDrawer();
     });
   }
 
   // Close drawer when clicking outside
   document.addEventListener('click', (e) => {
-    if (!e.target.closest('nav') && !e.target.closest('#mobileNavDrawer')) {
-      navbarToggle.classList.remove('active');
-      navbarLinks.classList.remove('active');
+    if (!e.target.closest('.mobile-nav-drawer') && 
+        !e.target.closest('#mobileMenuBtn') &&
+        mobileNavDrawer?.classList.contains('open')) {
       closeMobileNavDrawer();
     }
   });
@@ -518,6 +523,38 @@ function updateActiveNav() {
 }
 
 // ===========================
+// PRODUCT GRID RENDERER
+// ===========================
+
+function renderProductGrid(dataArray, containerId) {
+  const container = document.getElementById(containerId);
+  if (!container || !dataArray || dataArray.length === 0) return;
+
+  const html = dataArray.map(product => `
+    <div class="car-card" onclick="window.gyftarModal.open('${product.id}')">
+      <div class="car-card-image">
+        <img src="${product.image}" alt="${product.name}">
+      </div>
+      <div class="car-card-content">
+        <span class="product-category" style="color: var(--accent); font-size: 0.65rem; text-transform: uppercase; letter-spacing: 0.15em; font-weight: 700;">
+          ${product.category}
+        </span>
+        <div class="car-card-header">
+          <div class="car-card-info">
+            <h3>${product.name}</h3>
+          </div>
+        </div>
+        <p style="color: var(--text-muted); font-size: 0.9rem;">${product.shortDesc}</p>
+        <div class="car-card-price">${formatNGN(product.price)}</div>
+        <button class="btn btn-primary" style="width: 100%; margin-top: auto;" onclick="window.addToCart('${product.id}'); event.stopPropagation();">Add to Cart</button>
+      </div>
+    </div>
+  `).join('');
+
+  container.innerHTML = html;
+}
+
+// ===========================
 // GLOBAL SCOPE BRIDGE
 // ===========================
 
@@ -530,6 +567,7 @@ window.openCartDrawer = openCartDrawer;
 window.closeCartDrawer = closeCartDrawer;
 window.openMobileNavDrawer = openMobileNavDrawer;
 window.closeMobileNavDrawer = closeMobileNavDrawer;
+window.renderProductGrid = renderProductGrid;
 
 // ===========================
 // INITIALIZATION - DOMContentLoaded
@@ -559,67 +597,20 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // Setup scroll detection for navbar
   window.addEventListener('scroll', () => {
-    const nav = document.querySelector('nav');
-    if (nav) {
+    const header = document.getElementById('siteHeader');
+    if (header) {
       if (window.scrollY > 50) {
-        nav.classList.add('scrolled');
+        header.classList.add('scrolled');
       } else {
-        nav.classList.remove('scrolled');
+        header.classList.remove('scrolled');
       }
     }
   });
 
   // Populate product grids if on home page
-  if (document.getElementById('featuredCarsContainer')) {
-    const featuredCart = products.filter(p => p.featured === true).slice(0, 3);
-    if (featuredCart.length > 0) {
-      const html = featuredCart.map(product => `
-        <div class="car-card" onclick="window.gyftarModal.open('${product.id}')">
-          <div class="car-card-image">
-            <img src="${product.image}" alt="${product.name}">
-          </div>
-          <div class="car-card-content">
-          <span class="product-category" style="color: var(--accent); font-size: 0.65rem; text-transform: uppercase; letter-spacing: 0.15em; font-weight: 700;">
-          ${product.category}
-        </span>
-            <div class="car-card-header">
-              <div class="car-card-info">
-                <h3>${product.name}</h3>
-              </div>
-            </div>
-            <p style="color: var(--text-muted); font-size: 0.9rem;">${product.shortDesc}</p>
-            <div class="car-card-price">${formatNGN(product.price)}</div>
-            <button class="btn btn-primary" style="width: 100%; margin-top: auto;" onclick="window.addToCart('${product.id}'); event.stopPropagation();">Add to Cart</button>
-          </div>
-        </div>
-      `).join('');
-      document.getElementById('featuredCarsContainer').innerHTML = html;
-    }
-  }
-
-  if (document.getElementById('dealsContainer')) {
-    const dealsCart = products.filter(p => p.bestSeller === true).slice(0, 3);
-    if (dealsCart.length > 0) {
-      const html = dealsCart.map(product => `
-        <div class="car-card" onclick="window.gyftarModal.open('${product.id}')">
-          <div class="car-card-image">
-            <img src="${product.image}" alt="${product.name}">
-          </div>
-          <div class="car-card-content">
-            <div class="car-card-header">
-              <div class="car-card-info">
-                <h3>${product.name}</h3>
-              </div>
-            </div>
-            <p style="color: var(--text-muted); font-size: 0.9rem;">${product.shortDesc}</p>
-            <div class="car-card-price">${formatNGN(product.price)}</div>
-            <button class="btn btn-primary" style="width: 100%; margin-top: auto;" onclick="window.addToCart('${product.id}'); event.stopPropagation();">Add to Cart</button>
-          </div>
-        </div>
-      `).join('');
-      document.getElementById('dealsContainer').innerHTML = html;
-    }
-  }
+  renderProductGrid(productsForHim, 'grid-for-him');
+  renderProductGrid(productsForHer, 'grid-for-her');
+  renderProductGrid(productsBespoke, 'grid-bespoke');
 
   console.log('GYFTAR - Ready!');
 });
@@ -627,8 +618,6 @@ document.addEventListener('DOMContentLoaded', () => {
 // Handle window resize to close drawers
 window.addEventListener('resize', () => {
   if (window.innerWidth > 768) {
-    navbarToggle?.classList.remove('active');
-    navbarLinks?.classList.remove('active');
     closeMobileNavDrawer();
     closeCartDrawer();
   }

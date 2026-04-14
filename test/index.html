@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>GYFTAR — The Art of Exceptional Gifting</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Lato:wght@300;400;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ============================================================
+       STICKY HEADER — Glassmorphism nav with scroll state
+       ============================================================ -->
+  <header class="site-header" id="siteHeader">
+    <div class="header-inner">
+
+      <!-- Logo — far left -->
+      <a href="#" class="site-logo"><img src="gyftar.png" alt="GYFTAR" srcset=""></a>
+
+      <!-- Desktop nav — center -->
+      <nav class="desktop-nav">
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#for-him">For Him</a>
+        <a href="#for-her">For Her</a>
+        <a href="#bespoke">Bespoke</a>
+        <a href="#contact">Contact Us</a>
+      </nav>
+
+      <!-- Header right — hamburger + cart on far right -->
+      <div class="header-right">
+        <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Open navigation">
+          <svg viewBox="0 0 24 24"><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+        </button>
+        <button class="cart-btn" id="cartOpenBtn" aria-label="Open shopping cart">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/>
+            <line x1="3" y1="6" x2="21" y2="6"/>
+            <path d="M16 10a4 4 0 01-8 0"/>
+          </svg>
+          <span class="cart-badge" id="cartBadge">0</span>
+        </button>
+      </div>
+
+    </div>
+  </header>
+
+  <!-- Mobile nav overlay -->
+  <div class="mobile-nav-overlay" id="mobileNavOverlay"></div>
+  <aside class="mobile-nav-drawer" id="mobileNavDrawer">
+    <div class="mobile-nav-header">
+      <span class="mobile-nav-title">Menu</span>
+      <button class="close-nav-btn" id="closeNavBtn" aria-label="Close menu">
+        <svg viewBox="0 0 24 24"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+      </button>
+    </div>
+    <nav class="mobile-nav-links">
+      <a href="#home">Home</a>
+      <a href="#about">About</a>
+      <a href="#for-him">For Him</a>
+        <a href="#for-her">For Her</a>
+        <a href="#bespoke">Bespoke</a>
+        <a href="#contact">Contact Us</a>
+    </nav>
+    <div class="mobile-nav-footer">
+      <a href="mailto:hello@gyftar.com" class="nav-contact-link">hello@gyftar.com</a>
+    </div>
+  </aside>
+
+
+  <!-- ============================================================
+       HERO SECTION — min-height 100dvh, typewriter effect
+       ============================================================ -->
+  <section class="hero-immersive" id="home">
+    <div class="hero-overlay"></div>
+    
+    <div class="hero-content">
+      <p class="hero-eyebrow">Welcome to Gyftar</p>
+      
+      <h1 class="hero-title">
+        <span id="typewriter-text"></span><span class="typewriter-cursor"></span>
+      </h1>
+      
+      <a href="#collection" class="btn-primary hero-btn">Explore the Collection</a>
+    </div>
+  </section>
+
+
+
+  <div class="divider"><hr /></div>
+
+
+  <!-- ============================================================
+       FEATURED COLLECTION — Dynamic product grid
+       ============================================================ -->
+  <section class="collection" id="collection">
+
+    <div class="section-header reveal">
+      <div>
+        <p class="section-eyebrow">Featured Collection</p>
+        <h2 class="section-title">Curated for the<br/>Extraordinary Few</h2>
+      </div>
+      <a href="#collection" class="section-link">View all →</a>
+    </div>
+
+    <div class="product-grid reveal-stagger" id="dynamic-product-grid"></div>
+
+    <!-- Product modal -->
+    <div class="modal-overlay" id="productModalOverlay"></div>
+    <aside class="product-modal" id="productModal" role="dialog" aria-modal="true">
+      <button class="modal-close-btn" id="modalCloseBtn" aria-label="Close modal">
+        <svg viewBox="0 0 24 24"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+      </button>
+      <div class="modal-content" id="modalContent"></div>
+    </aside>
+
+  </section>
+
+
+  <div class="divider"><hr /></div>
+
+
+  <!-- ============================================================
+       THE GYFTAR STANDARD — Value props
+       ============================================================ -->
+  <section class="standards-section" id="standards">
+    <div class="standards-inner">
+
+      <div class="standards-top reveal">
+        <h2 class="standards-headline">We do not sell gifts.<br />We craft <em>legacies.</em></h2>
+        <p class="standards-copy">Every Gyftar box is a deliberate act of care. We spend months sourcing each item globally so that when it arrives, the recipient feels seen — truly, completely seen. Nothing is generic. Nothing is rushed. This is our promise.</p>
+      </div>
+
+      <!-- Four pillars grid -->
+      <div class="standards-grid reveal-stagger">
+
+        <div class="standard-item">
+          <span class="standard-number">01</span>
+          <h3 class="standard-title">Hand-Sourced Global Items</h3>
+          <p class="standard-body">From Kyoto tea houses to Peruvian chocolate estates — every product is selected in person, never from a catalogue.</p>
+        </div>
+
+        <div class="standard-item">
+          <span class="standard-number">02</span>
+          <h3 class="standard-title">Bespoke Packaging</h3>
+          <p class="standard-body">Our signature rigid boxes are crafted in Lagos, lined with heritage fabric, and sealed with wax bearing your recipient's initial.</p>
+        </div>
+
+        <div class="standard-item">
+          <span class="standard-number">03</span>
+          <h3 class="standard-title">White-Glove Delivery</h3>
+          <p class="standard-body">Your gift is hand-delivered by our concierge team. No courier vans. No crumpled corners. It arrives as it was meant to arrive.</p>
+        </div>
+
+        <div class="standard-item">
+          <span class="standard-number">04</span>
+          <h3 class="standard-title">Personalised Storytelling</h3>
+          <p class="standard-body">Every box ships with a handwritten card narrating the origin of each item — because context transforms a gift into a story.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ============================================================
+       TESTIMONIAL STRIP
+       ============================================================ -->
+  <section class="testimonial-strip">
+    <div class="reveal">
+      <blockquote class="testimonial-quote">
+        "The look on her face when she opened it. That's the only review Gyftar will ever need."
+      </blockquote>
+      <p class="testimonial-attr">— Adaeze O., Lagos · The Milestone Box</p>
+    </div>
+  </section>
+
+
+  <!-- ============================================================
+       FOOTER
+       ============================================================ -->
+  <footer class="site-footer">
+    <div class="footer-inner">
+
+      <div class="footer-top">
+
+        <!-- Brand column -->
+        <div class="footer-brand footer-col">
+          <div class="site-logo">GYFTAR</div>
+          <p class="footer-brand-copy">Thoughtfully curated luxury gift experiences delivered across Nigeria and beyond.</p>
+        </div>
+
+        <!-- Collections column -->
+        <div class="footer-col">
+          <h4 class="footer-col-title">Collections</h4>
+          <ul>
+            <li><a href="#">Corporate Gifting</a></li>
+            <li><a href="#">Celebrations</a></li>
+            <li><a href="#">Wellness</a></li>
+            <li><a href="#">Bespoke Orders</a></li>
+          </ul>
+        </div>
+
+        <!-- Company column -->
+        <div class="footer-col">
+          <h4 class="footer-col-title">Company</h4>
+          <ul>
+            <li><a href="#">Our Story</a></li>
+            <li><a href="#">The Standard</a></li>
+            <li><a href="#">Careers</a></li>
+            <li><a href="#">Press</a></li>
+          </ul>
+        </div>
+
+        <!-- Contact column -->
+        <div class="footer-col">
+          <h4 class="footer-col-title">Contact</h4>
+          <ul>
+            <li><a href="mailto:hello@gyftar.com">hello@gyftar.com</a></li>
+            <li><a href="tel:+2348000000000">+234 800 000 0000</a></li>
+            <li><a href="#">Lagos, Nigeria</a></li>
+          </ul>
+        </div>
+
+      </div>
+
+      <div class="footer-bottom">
+        <p class="footer-copy">&copy; 2025 Gyftar. All rights reserved.</p>
+
+        <!-- Social icons -->
+        <div class="footer-socials">
+          <!-- Instagram -->
+          <a href="#" aria-label="Instagram">
+            <svg viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/><circle cx="17.5" cy="6.5" r="1.5"/></svg>
+          </a>
+          <!-- Twitter/X -->
+          <a href="#" aria-label="Twitter">
+            <svg viewBox="0 0 24 24"><path d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z"/></svg>
+          </a>
+          <!-- LinkedIn -->
+          <a href="#" aria-label="LinkedIn">
+            <svg viewBox="0 0 24 24"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"/><circle cx="4" cy="4" r="2"/></svg>
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </footer>
+
+
+  <!-- ============================================================
+       CART DRAWER
+       ============================================================ -->
+
+  <!-- Backdrop — clicking it closes the drawer -->
+  <div class="cart-overlay" id="cartOverlay"></div>
+
+  <!-- The drawer panel -->
+  <aside class="cart-drawer" id="cartDrawer" role="dialog" aria-label="Shopping cart" aria-modal="true">
+
+    <!-- Drawer header -->
+    <div class="cart-header">
+      <div>
+        <h2 class="cart-title">Your Cart</h2>
+        <span class="cart-count-label" id="cartCountLabel">0 items</span>
+      </div>
+      <button class="cart-close-btn" id="cartCloseBtn" aria-label="Close cart">
+        <svg viewBox="0 0 24 24"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+      </button>
+    </div>
+
+    <!-- Scrollable item list — rendered by JS -->
+    <div class="cart-items" id="cartItems">
+      <!-- Empty state shown by default; JS replaces with items -->
+      <div class="cart-empty" id="cartEmpty">
+        <div class="cart-empty-icon">
+          <svg viewBox="0 0 24 24"><path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 01-8 0"/></svg>
+        </div>
+        <p>Your cart is empty</p>
+        <span>Add a curated box to begin</span>
+      </div>
+    </div>
+
+    <!-- Footer with totals & WhatsApp CTA -->
+    <div class="cart-footer" id="cartFooter" style="display:none;">
+      <div class="cart-subtotal">
+        <span class="cart-subtotal-label">Total</span>
+        <span class="cart-subtotal-value" id="cartTotal">₦0</span>
+      </div>
+      <p class="cart-note">Prices include VAT. Delivery calculated at checkout.</p>
+      <!-- WhatsApp checkout button — triggers JS handler -->
+      <button class="btn-whatsapp" id="whatsappBtn">
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+          <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.67-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.076 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421-7.403h-.004a9.87 9.87 0 00-5.031 1.378c-3.055 2.288-3.428 6.289-1.07 9.545 1.143 1.645 2.829 2.742 4.979 3.212.529.111 1.06.111 1.581 0 3.51-.574 6.565-2.696 8.039-5.677 1.537-3.116 1.537-6.556 0-9.672C19.902 6.117 16.85 4 13.051 4c-.916 0-1.823.12-2.716.358z"/>
+        </svg>
+        Checkout via WhatsApp
+      </button>
+    </div>
+
+  </aside>
+
+
+  <!-- ============================================================
+       TOAST NOTIFICATION (JS-controlled)
+       ============================================================ -->
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+
+  <!-- ============================================================
+       JAVASCRIPT
+       ============================================================ -->
+  <script src="script.js"></script>
+</body>
+</html>
